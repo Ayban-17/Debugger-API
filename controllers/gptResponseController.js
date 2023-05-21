@@ -35,7 +35,9 @@ const fetchData = async (url, language, code) => {
 
 const getAnswer = async (req, res) => {
   const { language, code } = req.body;
-  console.log(req.method);
+  console.log("Method:", req.method);
+  console.log("Language:", language);
+  console.log("Code", code);
   try {
     await fetchData(url, language, code);
     res.json({ msg: answer });
