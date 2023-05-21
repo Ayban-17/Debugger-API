@@ -11,6 +11,7 @@ app.use(cors());
 import dotenv from "dotenv";
 
 dotenv.config();
+
 app.use("/api/v1/openAI", gptRouter);
 
 app.listen(port, () => {
